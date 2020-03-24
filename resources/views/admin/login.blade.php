@@ -43,7 +43,7 @@
 <section id="wrapper" class="login-register login-sidebar" style="background-image:url({{asset('public')}}/assets/images/background/login-register.jpg);">
     <div class="login-box card">
         <div class="card-body">
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="{{ route('admin.login-submit') }}">
                 @csrf
                 <a href="javascript:void(0)" class="db"><img src="{{asset('public')}}/assets/images/logo-icon.png" alt="Home" /><br/><img src="{{asset('public')}}/assets/images/logo-text.png" alt="Home" /></a>
                 <div class="form-group m-t-40">

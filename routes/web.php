@@ -22,3 +22,10 @@ Route::get('/add-image', 'HomeController@addImage')->name('add-image');
 Route::post('/submit-image', 'HomeController@submitData')->name('submit-image');
 Route::post('/data-delete','HomeController@deleteData')->name('data-delete');
 Route::get('/search-image','HomeController@searchImage')->name('search-image');
+
+Route::namespace('Admin')->name('admin.')->prefix('admin')->group(function (){
+    Route::get('login','AdminAuthController@getLogin')->name('login');
+    Route::post('login','AdminAuthController@postLogin')->name('login-submit');
+    Route::post('logout','AdminAuthController@postLogout')->name('logout');
+    Route::get('dashboard','AdminController@index')->name('dashboard');
+});
